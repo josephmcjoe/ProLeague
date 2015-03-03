@@ -1,0 +1,9 @@
+%H1 All Teams
+%table
+  %tr
+    %td Team Name
+    %td Last Updated
+  - @teams.each do |team|
+    %tr
+      %td= team.name
+      %td= team.updated_at
