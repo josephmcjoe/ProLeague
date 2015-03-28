@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe "Teams", type: :request do
   describe "GET /teams/new" do
     it "Should have the form to create a new team" do
-      visit new_team_path
+      visit teams_path
+      click_button "New Team"
       expect(page).to have_content("New Team")
       expect(page).to have_content("Name")
       page.fill_in "Name", :with => "CJ Entus"

@@ -1,0 +1,7 @@
+%h1 New Player
+= form_for(@player) do |f|
+  = f.label(:name)
+  = f.text_field(:name)
+  = f.label(:team)
+  = f.collection_select(:team_id, @teams, :id, :name, prompt: true)
+  = f.submit
