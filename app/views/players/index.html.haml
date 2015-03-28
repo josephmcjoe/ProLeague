@@ -1,0 +1,12 @@
+%H1 All Players
+=button_to "New Player", new_player_path, method: 'get'
+%table
+  %tr
+    %td Player Name
+    %td Team Name
+    %td Last Updated
+  - @players.each do |player|
+    %tr
+      %td= player.name
+      %td= player.team_name
+      %td= player.updated_at
